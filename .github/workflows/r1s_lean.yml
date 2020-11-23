@@ -13,7 +13,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    if: github.repository == 'klever1988/nanopi-openwrt'
+    if: github.repository == 'Daqianer/nanopi-openwrt'
 
     steps:
 
@@ -53,10 +53,6 @@ jobs:
 
       - name: Build FriendlyWrt
         run: . 4_build_image.sh friendlywrt-h5 nanopi_r1s.mk
-             
-      - name: Zip Files
-        run: |
-          gzip friendlywrt-h5/out/*.img
           
       - name: Assemble Artifact
         run: |
